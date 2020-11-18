@@ -12,3 +12,7 @@ to [OpenScale](https://github.com/oliexdev/openScale).
 kscript GoogleFitToOpenScaleCSV.kt
 ```
 5. Output should be in openscale.csv
+
+# Possible improvements
+1. Script takes average weight from each day, it could parse each measurement from CSVs provided by Google.
+2. Time of a measurement is hardcoded to 8am, due to simplicity of not having to parse all the files.
