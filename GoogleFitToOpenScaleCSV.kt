@@ -54,7 +54,7 @@ fun writeOpenScaleData(googleFitDaySummaries: List<GoogleFitDaySummary>) {
 
 fun weightWithOneDecimalPlace(weight: String) = BigDecimal(weight.toDouble()).setScale(1, RoundingMode.HALF_EVEN)
 
-val OPEN_SCALE_HEADERS = listOf("datetime", "weight")
+val OPEN_SCALE_HEADERS = listOf("dateTime", "weight")
 const val GOOGLE_FIT_TAKEOUT_SUMMARY_FILE_NAME = "Daily Summaries.csv"
 const val OUTPUT_FILE_NAME = "openscale.csv"
 const val COLUMN_DATE = "Date"
