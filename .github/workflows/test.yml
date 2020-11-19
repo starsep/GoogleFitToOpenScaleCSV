@@ -1,0 +1,32 @@
+---
+
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install sdkman
+        run: curl -s https://get.sdkman.io | bash
+
+      - name: Install Kotlin and kscript
+        run: |
+          source "/home/runner/.sdkman/bin/sdkman-init.sh" && \
+          sdk install kotlin && \
+          sdk install kscript
+
+      - name: Run test.sh
+        run: |
+          source "/home/runner/.sdkman/bin/sdkman-init.sh" && \
+          cd tests && \
+          ./test.sh
